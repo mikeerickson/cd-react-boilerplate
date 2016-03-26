@@ -7,13 +7,26 @@
 - babel
 - jest
 - less
-- webpack-dev-server
+- webpack-dev-server (optional)
+- lite-server (browserSync wrapper, preferred method)
 
 #### Installation
 
 ```
 $ git clone https://github.com/mikeerickson/cd-react-boilerplate
 $ npm install 
+```
+
+#### Tasks
+
+```
+$ gulp less    // build less (dont want in js stream)
+
+$ gulp eslint  // stand alone linting (also covered with webpack)
+
+$ gulp mocha   // non jest tests
+
+$ gulp copy    // copy assets to destination (fonts, vendor, index)
 ```
 
 #### Tests
