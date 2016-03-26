@@ -1,8 +1,8 @@
 {
-  "name": "players-2016",
+  "name": "cd-react-boilerplate",
   "version": "0.0.1",
-  "description": "React Players 2016",
-  "main": "index.jsx",
+  "description": "cd-react-boilerplate",
+  "main": "src/index.jsx",
   "scripts": {
     "test": "gulp mocha && jest"
   },
@@ -27,7 +27,11 @@
   "keywords": [
     "react",
     "webpack",
-    "eslint"
+    "eslint",
+    "less",
+    "mocha",
+    "jest",
+    "babel"
   ],
   "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
   "license": "MIT",
