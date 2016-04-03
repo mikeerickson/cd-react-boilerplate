@@ -19,10 +19,11 @@ module.exports = {
 	},
 
 	scripts: {
-		src: ['.src/js/**/*.js'],
-		main: './src/js/index.jsx',
-		dest: './dist/js',
-		filename: 'app.js'
+		src:      ['.src/js/**/*.js'],
+		main:     './src/js/index.jsx',
+		dest:     './dist/js',
+		filename: 'app.js',
+		entry:    './src/js/index.jsx'
 	},
 
 	lint: {

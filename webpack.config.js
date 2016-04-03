@@ -1,5 +1,16 @@
-var path    = require('path');
-var webpack = require('webpack');
+// WEBPACK MODULE
+// webpack.config.js
+// Mike Erickson <codedungeon@gmail.com>
+// 2016-04-02 - 6:13 PM
+// $ npm i -D webpack webpack-notifier babel-loader eslint-loader eslint
+// =============================================================================
+
+/* eslint no-undef:0*/
+/* eslint no-unused-vars:0*/
+
+var path                   = require('path');
+var webpack                = require('webpack');
+var WebpackNotifierPlugin  = require('webpack-notifier');
 
 module.exports = {
 	devtool: 'source-map',
@@ -12,7 +23,11 @@ module.exports = {
 		publicPath: '/static/'
 	},
 	plugins: [
-
+		new WebpackNotifierPlugin({
+			title:           'Webpack',
+			contentImage:    './node_modules/cd-utils/assets/test-pass.png',
+			excludeWarnings: true
+		}),
 	],
 	module: {
 		preLoaders: [

@@ -9,6 +9,7 @@
 - less
 - webpack-dev-server (optional)
 - lite-server (browserSync wrapper, preferred method)
+- istanbul
 
 #### Installation
 
@@ -32,7 +33,7 @@ $ gulp copy    // copy assets to destination (fonts, vendor, index)
 #### Tests
 
 ```
-$ npm test 
+$ npm test // all tests via jest, mocha and istanbul
 
 or 
 
