@@ -19,8 +19,9 @@ msg.init({timestamp: true, showPipeFile: false})
 gulp.task('clean', () => {
   return gulp.src('files')
     .on('error', handleErrors)
-	.pipe(gulp.dest('dist'))
-	.pipe(msg.flush.error(`*** Incomplete Task: Clean ***`));
+		.pipe(plumber())
+		.pipe(gulp.dest('dist'))
+		.pipe(msg.flush.error(`*** Incomplete Task: Clean ***`));
 });
 
 
