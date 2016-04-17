@@ -11,6 +11,7 @@ import fs           from 'fs'
 import path         from 'path'
 import fse          from 'fs.extra'
 import copy         from 'gulp-copy'
+import size         from 'gulp-size'
 
 let utils = temp({})
 
@@ -21,6 +22,7 @@ gulp.task('copy:html', () => {
 		.on('error', handleErrors)
 		.pipe(plumber())
 		.pipe(copy(config.copy.html.dest, {prefix: 1}))
+		.pipe(size({title: 'HTML'}))
 		.pipe(msg.flush.success(`*** ${utils.ellipsis(config.copy.html.src,50)} ***`));
 });
 

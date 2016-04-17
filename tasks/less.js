@@ -4,6 +4,7 @@ import msg    from 'gulp-messenger'
 import config from './gulp.config'
 import path   from 'path'
 import concat from 'gulp-concat'
+import size   from 'gulp-size'
 
 gulp.task('less', () => {
 	return gulp.src(config.less.src)
@@ -12,6 +13,7 @@ gulp.task('less', () => {
 			paths: [ path.join(__dirname, 'less', 'includes') ]
 		}))
 		.pipe(gulp.dest(config.less.dist))
+		.pipe(size({title: 'LESS'}))
 		.pipe(msg.flush.success(`*** LESS Files Compiled [${config.less.dist}/${config.less.filename}] ***`));
 })
 

@@ -13,6 +13,7 @@ import webpack from 'gulp-webpack'
 import config  from './gulp.config'
 import msg     from 'gulp-messenger'
 import temp    from 'cd-utils'
+import size    from 'gulp-size'
 
 let utils = temp({});
 
@@ -24,9 +25,9 @@ gulp.task('webpack', () => {
 	return gulp.src(webpackConfig.entry)
 		.pipe(webpack(webpackConfig))
 		.pipe(gulp.dest(webpackConfig.output.path))
+		.pipe(size({title: 'js'}))
 		.pipe(
 			msg.flush.success(
 				`*** React Files Compiled [${config.scripts.dest}/${webpackConfig.output.filename}] ${new Date()} ***`
 			));
 })
-
