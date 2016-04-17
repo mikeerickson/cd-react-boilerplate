@@ -1,6 +1,6 @@
 {
   "name": "cd-react-boilerplate",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "cd-react-boilerplate",
   "main": "src/index.jsx",
   "scripts": {
@@ -34,7 +34,11 @@
     "babel",
     "bootstrap"
   ],
-  "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
+  "author": {
+    "name": "Mike Erickson",
+    "email": "<codedungeon@gmail.com>",
+     "website": "https://github.com/mikeerickson"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "6.7.5",
